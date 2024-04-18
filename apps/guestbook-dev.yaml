@@ -12,6 +12,11 @@ spec:
     helm:
       valueFiles:
         - values-dev.yaml
+      parameters:
+        - name: image.tag
+          value: 0.1.0
+        - name: service.type
+          value: ClusterIP
   destination:
     namespace: guestbook-dev
     name: dev
